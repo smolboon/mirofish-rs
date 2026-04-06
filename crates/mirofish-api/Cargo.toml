@@ -1,0 +1,30 @@
+[package]
+name = "mirofish-api"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+mirofish-core = { path = "../mirofish-core" }
+mirofish-llm = { path = "../mirofish-llm" }
+mirofish-graph = { path = "../mirofish-graph" }
+mirofish-sim = { path = "../mirofish-sim" }
+mirofish-report = { path = "../mirofish-report" }
+mirofish-task = { path = "../mirofish-task" }
+mirofish-text = { path = "../mirofish-text" }
+axum = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+async-stream = { workspace = true }
+futures = "0.3"
+validator = { workspace = true }
+multer = "3.1"

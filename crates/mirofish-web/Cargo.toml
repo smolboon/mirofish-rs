@@ -1,0 +1,40 @@
+[package]
+name = "mirofish-web"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+leptos = { version = "0.7", features = ["csr"] }
+leptos_router = "0.7"
+gloo-net = "0.6"
+gloo-timers = { version = "0.3", features = ["futures"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = [
+    "CanvasRenderingContext2d",
+    "HtmlCanvasElement",
+    "FileReader",
+    "FileList",
+    "Blob",
+    "KeyboardEvent",
+    "HtmlInputElement",
+    "HtmlSelectElement",
+    "Headers",
+    "Response",
+    "Window",
+    "RequestInit",
+    "EventTarget",
+    "Event"
+] }
+js-sys = "0.3"
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde-wasm-bindgen = "0.6"
+console_log = "1.0"
+log = "0.4"
+petgraph = "0.6"

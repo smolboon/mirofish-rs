@@ -1,0 +1,17 @@
+[package]
+name = "mirofish-text"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+mirofish-core = { path = "../mirofish-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+pdf-extract = { workspace = true }
+chardetng = { workspace = true }
+encoding_rs = "0.8"
+uuid = { workspace = true }

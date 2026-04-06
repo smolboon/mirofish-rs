@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiroFish - Multi-Agent Social Simulation Platform</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="stylesheet" href="/main-b93a77c1cdc02269.css" integrity="sha384-4L9uYtkSY/ohubtyxG6ci7Z5NUvP3sjH1ia349h75OCKFCB/surOcEKPfH8jdXZK"/>
+<link rel="modulepreload" href="/mirofish-web-a998088f1ec29168.js" crossorigin="anonymous" integrity="sha384-baZNHYxE3AmoBWN2qEVqlKQ6RfP9TdvWgBHXjLgX2FQ8N+1/Xtg8tZ6xEosyBljx"><link rel="preload" href="/mirofish-web-a998088f1ec29168_bg.wasm" crossorigin="anonymous" integrity="sha384-PBIq/3V2eTj5sBngDKVW2HBML/8hAG3ZFEpxOI/Ig3p3OdoGK/1C93K9Iy41C6LN" as="fetch" type="application/wasm"></head>
+<body>
+    <div id="app"></div>
+
+<script type="module">
+import init, * as bindings from '/mirofish-web-a998088f1ec29168.js';
+const wasm = await init({ module_or_path: '/mirofish-web-a998088f1ec29168_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>

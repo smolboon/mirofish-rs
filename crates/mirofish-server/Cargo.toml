@@ -1,0 +1,31 @@
+[package]
+name = "mirofish-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "MiroFish Server - Single binary with API and Wasm frontend"
+
+[[bin]]
+name = "mirofish-server"
+path = "src/main.rs"
+
+[dependencies]
+mirofish-core = { path = "../mirofish-core" }
+mirofish-api = { path = "../mirofish-api" }
+mirofish-llm = { path = "../mirofish-llm" }
+mirofish-graph = { path = "../mirofish-graph" }
+mirofish-sim = { path = "../mirofish-sim" }
+mirofish-report = { path = "../mirofish-report" }
+mirofish-task = { path = "../mirofish-task" }
+mirofish-text = { path = "../mirofish-text" }
+axum = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+dotenvy = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

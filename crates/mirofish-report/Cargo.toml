@@ -1,0 +1,23 @@
+[package]
+name = "mirofish-report"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+mirofish-core = { path = "../mirofish-core" }
+mirofish-llm = { path = "../mirofish-llm" }
+mirofish-graph = { path = "../mirofish-graph" }
+mirofish-sim = { path = "../mirofish-sim" }
+mirofish-task = { path = "../mirofish-task" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+async-stream = { workspace = true }
+futures = "0.3"
+regex = "1.11"

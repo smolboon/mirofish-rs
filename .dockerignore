@@ -1,0 +1,34 @@
+.git
+.github
+.gitignore
+.vscode
+.DS_Store
+.env
+
+# Rust build artifacts (keep release binary)
+target/debug
+target/release/.fingerprint
+target/release/build
+target/release/deps
+target/release/incremental
+
+# Cargo cache
+.cargo
+
+# Node.js (not needed for Rust)
+node_modules
+
+# Python (not needed for Rust)
+__pycache__
+*.pyc
+.venv
+.python-version
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# IDE
+.cursor
+.idea
+*.swp
+*.swo
