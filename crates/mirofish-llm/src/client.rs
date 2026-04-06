@@ -18,7 +18,7 @@ use async_openai::{
 use serde::de::DeserializeOwned;
 use tracing::{debug, instrument};
 
-use mirofish_core::{AppConfig, LlmError, Result};
+use mirofish_core::{AppConfig, LlmError};
 
 /// LLM Client for making API calls
 #[derive(Clone)]

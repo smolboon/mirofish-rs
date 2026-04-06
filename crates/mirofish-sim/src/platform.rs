@@ -2,9 +2,7 @@
 
 use std::collections::HashMap;
 use chrono::Utc;
-use tracing::debug;
-
-use mirofish_core::{SimulationPlatform, AgentAction};
+use mirofish_core::SimulationPlatform;
 use crate::actions::Post;
 
 /// Platform-specific behavior

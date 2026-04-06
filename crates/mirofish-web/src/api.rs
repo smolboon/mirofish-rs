@@ -301,7 +301,7 @@ impl ApiClient {
         let url = format!("{}{}", self.base_url, path);
         let body_str = serde_json::to_string(&body).map_err(|e| e.to_string())?;
 
-        let mut opts = RequestInit::new();
+        let opts = RequestInit::new();
         opts.set_method("POST");
         opts.set_body(&wasm_bindgen::JsValue::from_str(&body_str));
 

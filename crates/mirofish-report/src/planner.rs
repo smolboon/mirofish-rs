@@ -1,6 +1,6 @@
 //! Report planning and outline generation
 
-use mirofish_core::{ReportOutline, ReportSection, ReportSectionOutline};
+use mirofish_core::{ReportOutline, ReportSectionOutline};
 use mirofish_llm::LLMClient;
 use mirofish_llm::prompts::{REPORT_PLAN_SYSTEM_PROMPT, REPORT_PLAN_USER_PROMPT_TEMPLATE};
 use tracing::debug;
@@ -53,7 +53,7 @@ pub async fn generate_report_outline(
         .unwrap_or_default();
 
     let mut sections = Vec::new();
-    for (i, section_data) in sections_data.iter().enumerate() {
+    for (_i, section_data) in sections_data.iter().enumerate() {
         sections.push(ReportSectionOutline {
             title: section_data
                 .get("title")

@@ -5,7 +5,7 @@
 //! - PanoramaSearch: Broad, full-picture view
 //! - QuickSearch: Lightweight, fast lookup
 
-use mirofish_core::{Result, GraphError};
+use mirofish_core::Result;
 use crate::client::{ZepClient, SearchResult as ZepSearchResult};
 
 /// Deep insight retrieval - decomposes query and searches multiple dimensions

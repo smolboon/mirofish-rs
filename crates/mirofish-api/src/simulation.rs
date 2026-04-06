@@ -8,7 +8,7 @@ use tracing::info;
 
 use mirofish_core::{
     Simulation, CreateSimulationRequest, PrepareSimulationRequest,
-    StartSimulationRequest, SimulationStatusResponse, SimulationConfig, AgentProfile,
+    StartSimulationRequest, SimulationStatusResponse,
 };
 
 use crate::state::AppState;

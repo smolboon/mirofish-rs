@@ -2,7 +2,7 @@
 //!
 //! Reads and filters entities from Zep graphs for use in simulation.
 
-use mirofish_core::{Result, GraphError};
+use mirofish_core::Result;
 use crate::client::{ZepClient, ZepEntity};
 
 /// Filtered entity result

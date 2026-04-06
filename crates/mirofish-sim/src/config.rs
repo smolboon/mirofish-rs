@@ -4,7 +4,7 @@ use chrono::Utc;
 use tracing::debug;
 
 use mirofish_core::{
-    AppConfig, AgentConfig, EventConfig, HotTopic, InitialPost, PlatformConfig,
+    AgentConfig, EventConfig, HotTopic, InitialPost, PlatformConfig,
     PlatformDetailConfig, SimulationConfig, TimeConfig,
 };
 use mirofish_graph::ZepEntity;
@@ -103,7 +103,7 @@ fn parse_time_config(data: &serde_json::Value, entities_count: usize) -> TimeCon
         .and_then(|v| v.as_u64())
         .unwrap_or(30) as u32;
 
-    let total_rounds = if minutes_per_round > 0 {
+    let _total_rounds = if minutes_per_round > 0 {
         (total_hours * 60) / minutes_per_round
     } else {
         144 // Default: 144 rounds

@@ -117,8 +117,8 @@ pub async fn stream_task(
 
 /// Chat with a generated report
 pub async fn chat_with_report(
-    State(state): State<AppState>,
-    Json(req): Json<ChatRequest>,
+    State(_state): State<AppState>,
+    Json(_req): Json<ChatRequest>,
 ) -> Result<Json<ChatResponse>, (axum::http::StatusCode, String)> {
     info!("Chat with report");
 

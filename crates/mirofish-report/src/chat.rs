@@ -8,8 +8,8 @@ use tracing::debug;
 /// Chat with the report using ReACT-enhanced responses
 pub async fn chat_with_report(
     llm: &LLMClient,
-    zep: &ZepClient,
-    graph_id: &str,
+    _zep: &ZepClient,
+    _graph_id: &str,
     report: &Report,
     request: &ChatRequest,
 ) -> Result<ChatResponse, String> {

@@ -80,17 +80,16 @@ impl GraphBuilder {
         progress_callback: &impl Fn(&str, f64),
     ) -> Result<()> {
         let total = episodes.len();
-        let mut processed = 0;
         let max_retries = 60;
         let retry_interval = Duration::from_secs(10);
 
         for i in 0..max_retries {
             let mut all_done = true;
-            let mut current_processed = 0;
+            let mut processed = 0;
 
             for episode in episodes {
                 match self.zep.wait_for_episode(graph_id, episode).await {
-                    Ok(true) => current_processed += 1,
+                    Ok(true) => processed += 1,
                     Ok(false) => all_done = false,
                     Err(e) => {
                         debug!("Error checking episode status: {}", e);
@@ -98,7 +97,6 @@ impl GraphBuilder {
                 }
             }
 
-            processed = current_processed;
             let progress = 0.55 + (processed as f64 / total as f64) * 0.40;
             progress_callback(
                 &format!("Processing {}/{} episodes...", processed, total),

@@ -1,6 +1,6 @@
 //! Report agent tools - search strategies for gathering simulation data
 
-use mirofish_graph::client::{ZepClient, SearchResult};
+use mirofish_graph::client::ZepClient;
 use mirofish_llm::LLMClient;
 use tracing::debug;
 

@@ -3,7 +3,6 @@
 use std::collections::HashMap;
 use rand::thread_rng;
 use rand::RngCore;
-use tracing::debug;
 
 use mirofish_core::{AgentConfig, AgentProfile};
 use mirofish_llm::LLMClient;
