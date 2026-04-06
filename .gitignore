@@ -60,3 +60,4 @@ backend/uploads/
 data/target/
 target/
 crates/mirofish-web/dist/
+.vscode/
